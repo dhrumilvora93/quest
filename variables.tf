@@ -25,3 +25,18 @@ variable "sg_id" {
 variable "sn_id" {
   description = "Subnet id"
 }
+
+variable "aws_profile" {
+  description = "AWS CLI Profle name"
+}
+
+variable "terraform_generated_vpc_cidr" {
+  description = "VPC CIDR"
+}
+
+variable "public_subnets" {
+  description = "Public Subnets"
+}
+variable "private_subnets" {
+  description = "Private Subnets"
+}
