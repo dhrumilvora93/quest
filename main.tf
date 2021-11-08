@@ -15,11 +15,11 @@ provider "aws" {
 }
 
 resource "aws_instance" "app_server" {
-  ami = "ami-02e136e904f3da870"
+  ami = var.ami_id
   instance_type = "t2.micro"
   user_data = "${file("ec2-setup.sh")}"
-  security_groups = [ "sg-0f3a15a83afddf36e" ]
-  subnet_id = "subnet-09068358b295680f2"
+  security_groups = [ var.sg_id ]
+  subnet_id = var.sn_id
   tags = {
     Name = var.instance_name
   }

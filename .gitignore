@@ -8,7 +8,7 @@ terraform*
 .DS_Store
 # C extensions
 *.so
-
+*.tfvars
 # Distribution / packaging
 .Python
 build/
